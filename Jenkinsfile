@@ -1,6 +1,5 @@
 node{
 	def mvnHome
-	agent any
 	stages {
 		stage("Preparation") {
 				git 'https://github.com/onofreiAdina/PracticaAIS1.git'
