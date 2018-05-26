@@ -4,8 +4,7 @@ node{
 				git 'https://github.com/onofreiAdina/PracticaAIS1.git'
 				mvnHome = tool "M3"
 		}
-		stage("Test") {
-			steps {				
+		stage("Test") {			
 				script {
 					if(isUnix()) {
 						sh "mvn test"
@@ -13,7 +12,7 @@ node{
 						bat(/"${mvnHome}\bin\mvn" test/)
 					}
 				}
-			}
+			
 		}
 	
 	stage("Results") {
