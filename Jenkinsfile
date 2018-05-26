@@ -1,6 +1,5 @@
 node{
 	def mvnHome
-	stages {
 		stage("Preparation") {
 				git 'https://github.com/onofreiAdina/PracticaAIS1.git'
 				mvnHome = tool "M3"
@@ -16,8 +15,8 @@ node{
 				}
 			}
 		}
-	}
-	post {
+	
+	stage("Results") {
 		always {
 			junit '**/target/surefire-reports/TEST-*.xml'
 		}
