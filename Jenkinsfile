@@ -3,10 +3,8 @@ pipeline {
 	agent any
 	stages {
 		stage("Preparation") {
-			steps {
 				git 'https://github.com/onofreiAdina/PracticaAIS1.git'
 				mvnHome = tool "M3"
-			}
 		}
 		stage("Test") {
 			steps {				
