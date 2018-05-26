@@ -4,7 +4,9 @@ node{
 				git 'https://github.com/onofreiAdina/PracticaAIS1.git'
 				mvnHome = tool "M3"
 		}
-		stage("Test") {			
+		stage("Test") {		
+			env.JAVA_HOME= "${tool 'JDK8'}"
+			env.PATH="{env.JAVA_HOME}/bin:${env.PATH}"
 				script {
 					if(isUnix()) {
 						sh "mvn test"
