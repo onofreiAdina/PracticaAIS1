@@ -1,4 +1,4 @@
-pipeline {
+node{
 	def mvnHome
 	agent any
 	stages {
