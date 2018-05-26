@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage("Start app"){
 			steps{
-				sh "src/target; java -jar cd tictactoe-enunciado-0.0.1-SNAPSHOT.jar > out.log & echo  \$! > pid"
+				sh "tic-tac-toe-enunciado/target; java -jar cd tictactoe-enunciado-0.0.1-SNAPSHOT.jar > out.log & echo  \$! > pid"
 			}
 		}
 		stage("Test") {
@@ -28,11 +28,11 @@ pipeline {
 	post {
 		always {
 			junit '**/target/surefire-reports/TEST-*.xml'
-			sh "kill cd \$(cat src/target/pid)"
-			archive "cd src/target/out.log"
+			sh "kill cd \$(cat tic-tac-toe-enunciado/target/pid)"
+			archive "cd tic-tac-toe-enunciado/target/out.log"
 		}
 		success{
-			archive "cd src/target/*.jar"
+			archive "cd tic-tac-toe-enunciado/target/*.jar"
 		}
 	}
 }
