@@ -10,14 +10,8 @@ pipeline {
 			}
 		}
 		stage("Test") {
-			steps {
-				script {
-					if(isUnix()) {
-						sh "mvn test"
-					} else {
-						bat(/"${mvnHome}\bin\mvn" test/)
-					}
-				}
+			steps {				
+				sh "mvn test"
 			}
 		}
 	}
