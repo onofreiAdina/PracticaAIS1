@@ -10,7 +10,7 @@ public class TicTacToeGame {
 		JOIN_GAME, GAME_READY, MARK, SET_TURN, GAME_OVER, RESTART, RECONNECT
 	}
 
-	static class Cell {
+	public static class Cell {
 		volatile boolean active = false;
 		volatile String value;
 	}

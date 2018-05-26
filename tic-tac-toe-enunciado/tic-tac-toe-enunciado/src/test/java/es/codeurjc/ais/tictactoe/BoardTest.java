@@ -1,6 +1,7 @@
 package es.codeurjc.ais.tictactoe;
 
 import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,8 +9,8 @@ import es.codeurjc.ais.tictactoe.Board;
 
 public class BoardTest {
 
-	Board tablero; 
-	String x,o;
+	private Board tablero; 
+	private String x,o;
 	
 	@Before
 	public void setUp() {
