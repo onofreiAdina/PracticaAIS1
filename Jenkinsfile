@@ -16,7 +16,7 @@ pipeline {
 		}
 		stage("Start app"){
 			steps{
-				sh "src/target; java -jar cd a.segurama-ag.onofrei-0.0.1-SNAPSHOT.jar > out.log & echo  \$! > pid"
+				sh "src/target; java -jar cd tictactoe-enunciado-0.0.1-SNAPSHOT.jar > out.log & echo  \$! > pid"
 			}
 		}
 		stage("Test") {
